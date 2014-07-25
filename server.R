@@ -7,7 +7,6 @@
 
 library(shiny)
 library(maps)
-library(plyr)
 library(dplyr)
 library(ggplot2)
 # lynchings <- read.csv("lynchings.csv")
