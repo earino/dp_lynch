@@ -39,9 +39,10 @@ shinyUI(fluidPage(
       
       selectInput("offense", 
                   label = "Show by Offsense",
-                  choices = c(NA, offenses))
+                  choices = c(NA, offenses)),
       
-
+      helpText("This Shiny application uses the HAR dataset to allow the user to visualize lynching data."),
+      helpText("Select an Offense from the dropdown above, and you will see the number of lynchings per state for that offense.")
     ),
 
     # Show a plot of the generated distribution
