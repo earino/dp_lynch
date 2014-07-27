@@ -47,7 +47,7 @@ shinyServer(function(input, output) {
     lynchings %>% group_by(Year) %>% summarise(Freq = n()) -> by_year
     by_year$Year <- as.numeric(as.character(by_year$Year))
     
-    p <- ggplot(by_year, aes(x=Year, y=Freq)) + geom_line() +  ggtitle("Lynchings by Year")
+    p <- ggplot(by_year, aes(x=Year, y=Freq)) + geom_bar(stat="identity") +  ggtitle("Lynchings by Year")
     print(p)
   })
   
